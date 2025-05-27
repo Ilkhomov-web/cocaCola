@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function Navbar(props) {
   const [isHover, setIsHover] = useState(true);
 
-  const handleHoverMouse = () => {
+  const handleHoverMouse = (props) => {
     setIsHover(false);
   };
 
@@ -59,7 +59,8 @@ function Navbar(props) {
             Brendlar
           </Typography>
           <Typography
-            onMouseEnter={handleHoverMouse}
+            onMouseOver={() => setIsHover(false)}
+            onMouseOut={() => setIsHover(true)}
             sx={{
               position: "relative",
               display: "inline-block",
@@ -86,10 +87,13 @@ function Navbar(props) {
             Ta'sir qilish
           </Typography>
           <Box
+            onMouseOver={() => setIsHover(false)}
+            onMouseOut={() => setIsHover(true)}
             sx={{
               width: "200px",
               padding: "15px",
               background: "white",
+              zIndex: 1000,
               display: isHover ? "none" : "flex",
               position: "absolute",
               top: "84px",

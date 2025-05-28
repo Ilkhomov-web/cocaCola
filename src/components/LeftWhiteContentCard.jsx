@@ -1,15 +1,26 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { Box, Button, Container, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function LeftWhiteContentCard(props) {
   const { pageTitle, conTitle, conDescription, conImgPath, conLink } = props;
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
+
   return (
     <div>
       <Container maxWidth={"lg"}>
         <Typography
           variant="h4"
           sx={{ textAlign: "center", fontWeight: "bold", margin: "50px 0" }}
+          data-aos="fade-down"
         >
           {pageTitle}
         </Typography>
@@ -17,6 +28,7 @@ function LeftWhiteContentCard(props) {
           sx={{ display: "flex", margin: "150px 0px", position: "relative" }}
         >
           <Box
+            data-aos="fade-right"
             sx={{
               background: "white",
               width: "45%",
@@ -67,6 +79,7 @@ function LeftWhiteContentCard(props) {
             </Link>
           </Box>
           <Box
+            data-aos="fade-left"
             sx={{
               width: "55%",
               position: "absolute",

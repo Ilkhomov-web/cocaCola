@@ -1,9 +1,11 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
+import { Link } from "react-router-dom";
 
-function OurBrands() {
+function OurBrands(props) {
+  const { marginTop, display } = props;
   return (
-    <div style={{ marginTop: "600px", marginBottom: "100px" }}>
+    <div style={{ marginTop: marginTop, marginBottom: "100px" }}>
       <Container maxWidth="lg">
         <Box
           sx={{
@@ -19,6 +21,7 @@ function OurBrands() {
               marginBottom: "50px",
               fontWeight: "bold",
             }}
+            data-aos="fade-down"
           >
             Bizning brendlarimiz bilan tanishing
           </Typography>
@@ -31,6 +34,7 @@ function OurBrands() {
             }}
           >
             <Box
+              data-aos="zoom-in"
               sx={{
                 width: "300px",
                 background: "white",
@@ -47,6 +51,7 @@ function OurBrands() {
               <Box component={"img"} src="/public/icon.svg"></Box>
             </Box>
             <Box
+              data-aos="zoom-in"
               sx={{
                 width: "300px",
                 background: "white",
@@ -63,6 +68,7 @@ function OurBrands() {
               <Box component={"img"} src="/public/fanta.svg"></Box>
             </Box>
             <Box
+              data-aos="zoom-in"
               sx={{
                 width: "300px",
                 background: "white",
@@ -79,18 +85,25 @@ function OurBrands() {
               <Box component={"img"} src="/public/sprite.svg"></Box>
             </Box>
           </Box>
-          <Button
-            sx={{
-              width: "50%",
-              background: "transparent",
-              border: "1px solid #000",
-              color: "#000",
-              fontWeight: "bold",
-              borderRadius: "20px",
-            }}
-          >
-            Ko'proq o'qish
-          </Button>
+          <Link to="/brands" style={{ textDecoration: "none" }}>
+            <Button
+              data-aos="fade-up"
+              sx={{
+                display: display,
+                width: "200px",
+                background: "black",
+                color: "white",
+                fontWeight: "bold",
+                borderRadius: "20px",
+                "&:hover": {
+                  background: "#333",
+                  cursor: "pointer",
+                },
+              }}
+            >
+              Barcha brendlar
+            </Button>
+          </Link>
         </Box>
       </Container>
     </div>

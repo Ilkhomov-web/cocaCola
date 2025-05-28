@@ -1,20 +1,33 @@
 import { Box, Button, Container, Typography } from "@mui/material";
-import React from "react";
+import React, { useEffect } from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Link } from "react-router-dom";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import JavascriptIcon from "@mui/icons-material/Javascript";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function Footer() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+  }, []);
   return (
     <div style={{ background: "black", padding: "50px 0" }}>
       <Container maxWidth="lg" style={{ color: "white", padding: "20px" }}>
         <Box>
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-            <Box component={"img"} src="/public/footerLogo.svg"></Box>
+            <Box
+              data-aos="fade-right"
+              component={"img"}
+              src="/public/footerLogo.svg"
+            ></Box>
             <Button
+              data-aos="fade-left"
               sx={{
                 width: "200px",
                 background: "transparent",
@@ -28,19 +41,24 @@ function Footer() {
               O'zbekiston | UZ
             </Button>
           </Box>
-          <hr style={{ margin: "40px 0px" }} />
+          <hr data-aos="flip-right" style={{ margin: "40px 0px" }} />
           <Box sx={{ display: "flex", justifyContent: "space-between" }}>
             <Box sx={{ display: "flex", gap: "50px" }}>
               <Box
                 sx={{ display: "flex", gap: "20px", flexDirection: "column" }}
               >
                 <Typography
+                  data-aos="fade-up"
                   variant="p"
                   sx={{ color: "gray", fontSize: "16px" }}
                 >
                   Biz haqimizda
                 </Typography>
-                <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/"
+                  data-aos="fade-up"
+                >
                   <Typography
                     variant="p"
                     sx={{
@@ -52,7 +70,11 @@ function Footer() {
                     Kompaniya haqida
                   </Typography>
                 </Link>
-                <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/"
+                  data-aos="fade-up"
+                >
                   <Typography
                     variant="p"
                     sx={{
@@ -64,7 +86,11 @@ function Footer() {
                     Hikoya
                   </Typography>
                 </Link>
-                <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/"
+                  data-aos="fade-up"
+                >
                   <Typography
                     variant="p"
                     sx={{
@@ -81,12 +107,17 @@ function Footer() {
                 sx={{ display: "flex", gap: "20px", flexDirection: "column" }}
               >
                 <Typography
+                  data-aos="fade-up"
                   variant="p"
                   sx={{ color: "gray", fontSize: "16px" }}
                 >
                   Yordam kerakmi?
                 </Typography>
-                <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/"
+                  data-aos="fade-up"
+                >
                   <Typography
                     variant="p"
                     sx={{
@@ -98,7 +129,11 @@ function Footer() {
                     Veb-sayt xaritasi
                   </Typography>
                 </Link>
-                <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/"
+                  data-aos="fade-up"
+                >
                   <Typography
                     variant="p"
                     sx={{
@@ -115,6 +150,7 @@ function Footer() {
                 sx={{ display: "flex", gap: "20px", flexDirection: "column" }}
               >
                 <Typography
+                  data-aos="fade-up"
                   variant="p"
                   sx={{ color: "gray", fontSize: "16px" }}
                 >
@@ -126,6 +162,7 @@ function Footer() {
                     width: "220px",
                     color: "white",
                   }}
+                  data-aos="fade-up"
                   to="/"
                 >
                   <Typography
@@ -139,7 +176,11 @@ function Footer() {
                     Shaxsiy ma'lumotlar uchun maxfiylik siyosati
                   </Typography>
                 </Link>
-                <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/"
+                  data-aos="fade-up"
+                >
                   <Typography
                     variant="p"
                     sx={{
@@ -151,7 +192,11 @@ function Footer() {
                     Foydalanish shartlari
                   </Typography>
                 </Link>
-                <Link style={{ textDecoration: "none", color: "white" }} to="/">
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  to="/"
+                  data-aos="fade-up"
+                >
                   <Typography
                     variant="p"
                     sx={{
@@ -167,19 +212,28 @@ function Footer() {
             </Box>
             <Box>
               <Box sx={{ display: "flex", gap: "20px" }}>
-                <Link style={{ textDecoration: "none", color: "white" }}>
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  data-aos="fade-up"
+                >
                   <FacebookIcon sx={{ fontSize: "30px" }} />
                 </Link>
-                <Link style={{ textDecoration: "none", color: "white" }}>
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  data-aos="fade-up"
+                >
                   <InstagramIcon sx={{ fontSize: "30px" }} />
                 </Link>
-                <Link style={{ textDecoration: "none", color: "white" }}>
+                <Link
+                  style={{ textDecoration: "none", color: "white" }}
+                  data-aos="fade-up"
+                >
                   <YouTubeIcon sx={{ fontSize: "30px" }} />
                 </Link>
               </Box>
             </Box>
           </Box>
-          <hr style={{ margin: "40px 0px" }} />
+          <hr style={{ margin: "40px 0px" }} data-aos="flip-right" />
           <Box
             sx={{
               display: "flex",

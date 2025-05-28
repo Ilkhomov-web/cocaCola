@@ -30,7 +30,7 @@ function HomePage(props) {
         conLink={"/"}
       />
       {/* brands components */}
-      <OurBrands />
+      <OurBrands marginTop={"600px"} display="flex" />
       <Footer />
     </div>
   );

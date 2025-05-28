@@ -17,6 +17,7 @@ function RightWhiteContentCard(props) {
           sx={{ display: "flex", margin: "150px 0px", position: "relative" }}
         >
           <Box
+            data-aos="fade-left"
             sx={{
               background: "white",
               width: "45%",
@@ -67,6 +68,7 @@ function RightWhiteContentCard(props) {
             </Link>
           </Box>
           <Box
+            data-aos="fade-right"
             sx={{
               width: "55%",
               position: "absolute",

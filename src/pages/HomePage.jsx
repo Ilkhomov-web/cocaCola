@@ -4,6 +4,7 @@ import Swipper from "../components/Swipper";
 import LeftWhiteContentCard from "../components/LeftWhiteContentCard";
 import RightWhiteContentCard from "../components/RightWhiteContentCard";
 import OurBrands from "../components/OurBrands";
+import Footer from "../components/Footer";
 
 function HomePage(props) {
   return (
@@ -30,6 +31,7 @@ function HomePage(props) {
       />
       {/* brands components */}
       <OurBrands />
+      <Footer />
     </div>
   );
 }

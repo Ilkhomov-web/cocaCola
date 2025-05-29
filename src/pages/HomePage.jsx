@@ -19,7 +19,7 @@ function HomePage(props) {
           "Coca-Cola kompaniyasining O'zbekistondagi istiqbollari va barqaror rivojlanish loyihalari haqida ma'lumot."
         }
         conImgPath={"/public/data1.webp"}
-        conLink={"/"}
+        conLink={"/sustainability"}
       />
       <RightWhiteContentCard
         conTitle={"KOMPANIYA HAQIDA"}

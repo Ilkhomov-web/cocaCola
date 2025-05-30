@@ -36,7 +36,7 @@
     outline: 6px solid #ffffff !important;
   }
   
-  .swiper-slide img {
+  .swiper-slide .swiper-image {
     /* display: block; */
     width: 100%;
     height: 600px;

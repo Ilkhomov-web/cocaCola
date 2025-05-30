@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function SustainabilitiyHeaderContent(props) {
+  const { imgUrl, description } = props;
   return (
     <div>
       <Container maxWidth="lg">
@@ -23,7 +24,7 @@ function SustainabilitiyHeaderContent(props) {
             },
             width: "100%",
             height: "500px",
-            backgroundImage: "url(/public/susAka.webp)",
+            backgroundImage: `url(${imgUrl})`,
             backgroundSize: "cover",
             padding: "40px",
             borderRadius: "10px",
@@ -33,6 +34,7 @@ function SustainabilitiyHeaderContent(props) {
             display: "flex",
             alignItems: "center",
           }}
+          data-aos="fade-up"
         >
           <Box
             sx={{
@@ -44,17 +46,13 @@ function SustainabilitiyHeaderContent(props) {
             }}
           >
             <Typography
+              data-aos="fade-up"
               variant="p"
               sx={{ fontSize: "18px", color: "#fff", wordSpacing: "2px" }}
             >
-              Barqarorlik strategiyamiz orqali biz atrof-muhitni muhofaza qilish
-              maqsadlarimiz sari olg'a siljish uchun brendlarimiz bo'ylab ajoyib
-              odamlarni qo'llab-quvvatlaymiz va jalb qilamiz - fermerlar va
-              xodimlardan shisha quyish bo'yicha hamkorlar va yetkazib
-              beruvchilar, mijozlar va iste'molchilar va biz yashayotgan
-              jamoalar. 
+              {description}
             </Typography>
-            <Link to="" sx={{ textDecoration: "none" }}>
+            <Link to="" data-aos="fade-up" sx={{ textDecoration: "none" }}>
               <Button
                 sx={{
                   background: "#fff",

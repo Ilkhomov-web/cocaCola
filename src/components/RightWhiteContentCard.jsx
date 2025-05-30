@@ -3,16 +3,24 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function RightWhiteContentCard(props) {
-  const { conTitle, conDescription, conImgPath, conLink } = props;
+  const {
+    conTitle,
+    conDescription,
+    conImgPath,
+    conLink,
+    marginSize,
+    pageTitle,
+  } = props;
   return (
-    <div style={{ marginTop: "700px" }}>
+    <div style={{ marginTop: marginSize ? marginSize : "700px" }}>
       <Container maxWidth={"lg"}>
-        {/* <Typography
+        <Typography
+          data-aos="fade-up"
           variant="h4"
           sx={{ textAlign: "center", fontWeight: "bold", margin: "50px 0" }}
         >
-          Global ta'sir
-        </Typography> */}
+          {pageTitle}
+        </Typography>
         <Box
           sx={{ display: "flex", margin: "150px 0px", position: "relative" }}
         >
@@ -50,6 +58,7 @@ function RightWhiteContentCard(props) {
               </Typography>
             </Box>
             <Link
+              target="_blank"
               to={conLink}
               style={{ textDecoration: "none", width: "100%" }}
             >

@@ -5,7 +5,15 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function LeftWhiteContentCard(props) {
-  const { pageTitle, conTitle, conDescription, conImgPath, conLink } = props;
+  const {
+    pageTitle,
+    conTitle,
+    conDescription,
+    conImgPath,
+    conLink,
+    marginSize,
+    marginBottom,
+  } = props;
 
   useEffect(() => {
     AOS.init({
@@ -15,7 +23,7 @@ function LeftWhiteContentCard(props) {
   }, []);
 
   return (
-    <div>
+    <div style={{ marginTop: marginSize, marginBottom: marginBottom }}>
       <Container maxWidth={"lg"}>
         <Typography
           variant="h4"

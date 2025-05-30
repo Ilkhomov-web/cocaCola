@@ -46,6 +46,7 @@ function Swipper(props) {
                 width={"100%"}
                 component={"img"}
                 src={item.image}
+                className="swiper-image"
                 sx={{
                   width: "100%",
                   height: "400px",

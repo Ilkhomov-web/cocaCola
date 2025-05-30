@@ -9,6 +9,9 @@
   text-align: center;
   font-size: 18px;
   background: #ffffff;
+  padding-bottom: 20px;
+  padding-left:10px ;
+  padding-right: 10px;
 
   /* Center slide text vertically */
   display: flex;

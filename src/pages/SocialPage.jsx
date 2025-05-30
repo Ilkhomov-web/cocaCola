@@ -7,13 +7,12 @@ import SustainabitiySwipper from "../components/SustainabitiySwipper";
 import SustainabitiyCard from "../components/SustainabitiyCard";
 import RightWhiteContentCard from "../components/RightWhiteContentCard";
 import LeftWhiteContentCard from "../components/LeftWhiteContentCard";
-import data from "../data/SustainbilitiyData";
-
 import Footer from "../components/Footer";
+import data from "../data/SocialData";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-function SustainabilitiyPage(props) {
+function SocialPage(props) {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -26,28 +25,17 @@ function SustainabilitiyPage(props) {
       <Navbar />
       <Container maxWidth="lg">
         <SustainabilitiyHeader
-          imgUrl="/public/susHeader.webp"
-          title="Bizning sayyoramiz juda muhim ahamiyatga ega"
-          description1="Bizning maqsadimiz barqaror va yaxshiroq umumiy kelajakdir. Hayotni,
-          jamoalarni va sayyoramizni yaxshi tomonga o'zgartiradigan barqaror
-          biznes yondashuvi. Yaxshilikka intilish orqali biz barchamiz uchun
-          yanada kuchli, barqaror kelajakni qurishimiz mumkin."
-          description2="Biz ijtimoiy, ekologik va iqtisodiy boshqaruvga alohida e’tibor
-          qaratgan holda barqaror rivojlanish masalalariga kompleks yondashamiz.
-          Faqat tizimli yondashuv radikal va barqaror o'zgarishlar yo'lida
-          to'g'ri vositadir."
+          imgUrl="/public/social1.webp"
+          title="Hayotimni yo'qotganim uchun juda afsusdaman"
+          description1="'Turfa, adolatli va inklyuziv ish joyi bizni kompaniya sifatida kuchliroq qilishiga, to'g'ri va jamoalar uchun umumiy kelajakga imkon berishiga, tengdan to'g'ridan-to'g'ri boshlashga berishiga va ishimizni va jamiyatimizga bog'liqlik yordamiga ishonamiz."
+          description2="Oʻz fermermizdan tashqari, biz dunyo boʻylab yuzlab hamkorlar, minglab taʼminotchilar va millionlab taʼminotchilar bilan ishlaymiz. Maqsadimiz xavfsiz va uzoq taʼminot zanjirining qismi sifatidayashnayotgan va tashqi koʻrinishdagi hamjamiyatlar olinadi.Biz iqtisodiy foyda, tenglik xilma-xillik, inklyuzivlikni va investitsiya tizimini yaxshilash orqali umumiy rivojlanishga harakat qilyapmiz va bularni Coca‑Cola fondi orqali amalga oshiryapmiz.Koprogini kashf eting"
         />
         <SustainabilitiyHeaderContent
-          imgUrl="/public/susAka.webp"
-          description="Barqarorlik strategiyamiz orqali biz atrof-muhitni muhofaza qilish
-              maqsadlarimiz sari olg'a siljish uchun brendlarimiz bo'ylab ajoyib
-              odamlarni qo'llab-quvvatlaymiz va jalb qilamiz - fermerlar va
-              xodimlardan shisha quyish bo'yicha hamkorlar va yetkazib
-              beruvchilar, mijozlar va iste'molchilar va biz yashayotgan
-              jamoalar."
+          imgUrl="/public/social2.webp"
+          description="Biz iqtisodiy foyda, tenglik xilma-xillik, inklyuzivlikni va investitsiya tizimini yaxshilash orqali umumiy rivojlanishga harakat qilyapmiz va bularni Coca‑Cola fondi orqali amalga oshiryapmiz. "
         />
         <SustainabitiySwipper
-          title="Ekologik barqaror rivojlanish sohasidagi faoliyatimiz yo'nalishlari"
+          title="Bizning diqqat markazimiz ijtimoiy sohalarimiz"
           data={data}
         />
         <Box>
@@ -101,4 +89,4 @@ function SustainabilitiyPage(props) {
   );
 }
 
-export default SustainabilitiyPage;
+export default SocialPage;

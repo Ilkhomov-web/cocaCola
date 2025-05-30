@@ -3,6 +3,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import BrandsPage from "./pages/BrandsPage";
 import SustainabilitiyPage from "./pages/SustainabilitiyPage";
+import SocialPage from "./pages/SocialPage";
 
 function App(props) {
   return (
@@ -11,6 +12,7 @@ function App(props) {
         <Route path="/" element={<HomePage />} />
         <Route path="/brands" element={<BrandsPage />} />
         <Route path="/sustainability" element={<SustainabilitiyPage />} />
+        <Route path="/social" element={<SocialPage />} />
       </Routes>
     </>
   );

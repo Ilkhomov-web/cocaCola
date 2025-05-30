@@ -118,12 +118,15 @@ function Navbar(props) {
             }}
           >
             <Link
-              to="/about"
+              to="/sustainability"
               style={{ textDecoration: "none", color: "black" }}
             >
               Barqaror rivojlanish
             </Link>
-            <Link to="/a" style={{ textDecoration: "none", color: "black" }}>
+            <Link
+              to="/social"
+              style={{ textDecoration: "none", color: "black" }}
+            >
               Ijtimoiy
             </Link>
           </Box>

@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import React from "react";
 
 const SustainabilitiyHeader = (props) => {
+  const { imgUrl, title, description1, description2 } = props;
   return (
     <div>
       <Box
@@ -12,26 +13,30 @@ const SustainabilitiyHeader = (props) => {
           margin: "50px 0px",
           borderRadius: "10px",
         }}
-        src="/public/susHeader.webp"
+        data-aos="fade-up"
+        src={imgUrl}
       ></Box>
       <Box sx={{ display: "flex", flexDirection: "column", gap: "15px" }}>
         <Typography
           variant="h4"
+          data-aos="fade-up"
           sx={{ fontWeight: "bold", textAlign: "center" }}
         >
-          Bizning sayyoramiz juda muhim ahamiyatga ega
+          {title}
         </Typography>
-        <Typography variant="p" sx={{ textAlign: "left", fontSize: "18px" }}>
-          Bizning maqsadimiz barqaror va yaxshiroq umumiy kelajakdir. Hayotni,
-          jamoalarni va sayyoramizni yaxshi tomonga o'zgartiradigan barqaror
-          biznes yondashuvi. Yaxshilikka intilish orqali biz barchamiz uchun
-          yanada kuchli, barqaror kelajakni qurishimiz mumkin.
+        <Typography
+          data-aos="fade-up"
+          variant="p"
+          sx={{ textAlign: "left", fontSize: "18px" }}
+        >
+          {description1}
         </Typography>
-        <Typography variant="p" sx={{ textAlign: "left", fontSize: "18px" }}>
-          Biz ijtimoiy, ekologik va iqtisodiy boshqaruvga alohida e’tibor
-          qaratgan holda barqaror rivojlanish masalalariga kompleks yondashamiz.
-          Faqat tizimli yondashuv radikal va barqaror o'zgarishlar yo'lida
-          to'g'ri vositadir.
+        <Typography
+          data-aos="fade-up"
+          variant="p"
+          sx={{ textAlign: "left", fontSize: "18px" }}
+        >
+          {description2}
         </Typography>
       </Box>
     </div>

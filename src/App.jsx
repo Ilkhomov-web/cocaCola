@@ -4,6 +4,7 @@ import HomePage from "./pages/HomePage";
 import BrandsPage from "./pages/BrandsPage";
 import SustainabilitiyPage from "./pages/SustainabilitiyPage";
 import SocialPage from "./pages/SocialPage";
+import ColaBrands from "./pages/ColaBrands";
 
 function App(props) {
   return (
@@ -13,6 +14,7 @@ function App(props) {
         <Route path="/brands" element={<BrandsPage />} />
         <Route path="/sustainability" element={<SustainabilitiyPage />} />
         <Route path="/social" element={<SocialPage />} />
+        <Route path="/coca-cola" element={<ColaBrands />} />
       </Routes>
     </>
   );

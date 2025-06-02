@@ -2,6 +2,12 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
 
+const DataBrands = [
+  { id: 1, imgUrl: "/public/icon.svg", urlPage: "/coca-cola" },
+  { id: 2, imgUrl: "public/fanta.svg", urlPage: "/fanta" },
+  { id: 3, imgUrl: "public/sprite.svg", urlPage: "/sprite" },
+];
+
 function OurBrands(props) {
   const { marginTop, display } = props;
   return (
@@ -33,57 +39,29 @@ function OurBrands(props) {
               gap: "50px",
             }}
           >
-            <Box
-              data-aos="zoom-in"
-              sx={{
-                width: "300px",
-                background: "white",
-                padding: "50px",
-                borderRadius: "20px",
-                "&:hover": {
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-                  transform: "scale(1.05)",
-                  cursor: "pointer",
-                  transition: "transform 0.5s ease",
-                },
-              }}
-            >
-              <Box component={"img"} src="/public/icon.svg"></Box>
-            </Box>
-            <Box
-              data-aos="zoom-in"
-              sx={{
-                width: "300px",
-                background: "white",
-                padding: "50px",
-                borderRadius: "20px",
-                "&:hover": {
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-                  transform: "scale(1.05)",
-                  cursor: "pointer",
-                  transition: "transform 0.5s ease",
-                },
-              }}
-            >
-              <Box component={"img"} src="/public/fanta.svg"></Box>
-            </Box>
-            <Box
-              data-aos="zoom-in"
-              sx={{
-                width: "300px",
-                background: "white",
-                padding: "50px",
-                borderRadius: "20px",
-                "&:hover": {
-                  boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
-                  transform: "scale(1.05)",
-                  cursor: "pointer",
-                  transition: "transform 0.5s ease",
-                },
-              }}
-            >
-              <Box component={"img"} src="/public/sprite.svg"></Box>
-            </Box>
+            {DataBrands.map((item) => {
+              return (
+                <Link key={item.id} to={item.urlPage}>
+                  <Box
+                    data-aos="zoom-in"
+                    sx={{
+                      width: "300px",
+                      background: "white",
+                      padding: "50px",
+                      borderRadius: "20px",
+                      "&:hover": {
+                        boxShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+                        transform: "scale(1.05)",
+                        cursor: "pointer",
+                        transition: "transform 0.5s ease",
+                      },
+                    }}
+                  >
+                    <Box component={"img"} src={item.imgUrl}></Box>
+                  </Box>
+                </Link>
+              );
+            })}
           </Box>
           <Link to="/brands" style={{ textDecoration: "none" }}>
             <Button

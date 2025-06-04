@@ -248,7 +248,8 @@ function Footer() {
                 display: "flex",
                 alignItems: "center",
               }}
-              to=""
+              to="https://t.me/Elka_0624"
+              target="blank_"
             >
               <JavascriptIcon sx={{ fontSize: "35px" }} />
               Ilkhomov-web

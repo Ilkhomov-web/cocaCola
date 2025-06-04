@@ -14,7 +14,9 @@ function App(props) {
         <Route path="/brands" element={<BrandsPage />} />
         <Route path="/sustainability" element={<SustainabilitiyPage />} />
         <Route path="/social" element={<SocialPage />} />
-        <Route path="/coca-cola" element={<ColaBrands />} />
+        <Route path="/brands/:brand" element={<ColaBrands />} />
+        {/* <Route path="/coca-cola" element={<ColaBrands />} />
+        <Route path="/fanta" element={<ColaBrands />} /> */}
       </Routes>
     </>
   );

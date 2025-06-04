@@ -3,9 +3,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const DataBrands = [
-  { id: 1, imgUrl: "/public/icon.svg", urlPage: "/coca-cola" },
-  { id: 2, imgUrl: "public/fanta.svg", urlPage: "/fanta" },
-  { id: 3, imgUrl: "public/sprite.svg", urlPage: "/sprite" },
+  { id: 1, imgUrl: "/icon.svg", urlPage: "/brands/coca-cola" },
+  { id: 2, imgUrl: "/fanta.svg", urlPage: "/brands/fanta" },
+  { id: 3, imgUrl: "/sprite.svg", urlPage: "/brands/sprite" },
 ];
 
 function OurBrands(props) {
